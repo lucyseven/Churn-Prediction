@@ -26,11 +26,11 @@ with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 
-# In[ ]:
+# In[8]:
 
 
 #read the template
-template = pd.read_csv("df.csv")
+template = pd.read_csv("BankChurners.csv")
 
 
 # In[ ]:
