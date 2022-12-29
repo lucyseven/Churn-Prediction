@@ -89,7 +89,7 @@ elif option == "Enter data":
     # Allow the user to enter data
     
     #Card_Category
-    card = st.selectbox('Card Category',df['Card_Category'].unique())
+    card = st.selectbox('Card Category',template['Card_Category'].unique())
     
     #month on book
     month_on_book = st.number_input('Months_on_book')
