@@ -124,13 +124,24 @@ elif option == "Enter data":
     count_c41 = st.number_input('Total_Ct_Chng_Q4_Q1')
     #avg utilization ratio 
     ratio = st.number_input('Avg_Utilization_Ratio')
-  
-    query = np.array([card,month_on_book,relationship,limit,month_inactive, contacts, balance, amount_c41, amount,count, count_c41,ratio])
-    query = query.reshape(1, 12)           
-    query = pd.DataFrame(query)
     
+    df = pd.DataFrame()
+    df['Card Category'] = [card]
+    df['Months_on_book'] = [month_on_book]
+    df['Total_Relationship_Count'] = [relationship]
+    df['Credit_Limit'] = [limit]
+    df['Months_Inactive_12_mon'] = [month_inactive]
+    df['Contacts_Count_12_mon'] = [contacts]
+    df['Total_Revolving_Bal'] = [balance]
+    df['Total_Amt_Chng_Q4_Q1'] = [amount_c41]
+    df['Total_Trans_Amt'] = [amount]
+    df['Total_Trans_Ct'] = [count]
+    df['Total_Ct_Chng_Q4_Q1'] = [count_c41]
+    df['Avg_Utilization_Ratio'] = [ratio]
+  
+      
     # Use the model to make predictions on the DataFrame
-    predictions = model.predict(query)
+    predictions = model.predict(df)
 
         # Display the predictions
     st.write(predictions)
