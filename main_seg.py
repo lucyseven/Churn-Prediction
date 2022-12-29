@@ -126,7 +126,7 @@ elif option == "Enter data":
     ratio = st.number_input('Avg_Utilization_Ratio')
     
     df = pd.DataFrame()
-    df['Card Category'] = [card]
+    df['Card_Category'] = [card]
     df['Months_on_book'] = [month_on_book]
     df['Total_Relationship_Count'] = [relationship]
     df['Credit_Limit'] = [limit]
