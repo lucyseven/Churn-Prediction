@@ -127,6 +127,7 @@ elif option == "Enter data":
   
     query = np.array([card,month_on_book,relationship,limit,month_inactive, contacts, balance, amount_c41, amount,count, count_c41,ratio])
     query = query.reshape(1, 12)           
+    query = pd.DataFrame(query)
     
     # Use the model to make predictions on the DataFrame
     predictions = model.predict(query)
